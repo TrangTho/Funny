@@ -1,0 +1,93 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="" >
+            <result>index.jsp</result>
+        </action>
+        <action name="LoginAction" class="trangbtt.actions.LoginAction">
+            <result name="success">index.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <action name="LogoutAction" class="trangbtt.actions.LogoutAction">
+            <result name="success">index.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <action name="SignUpAction" class="trangbtt.actions.SignUpAction">
+            <result name="error">error.jsp</result>
+            <result name="success">active.jsp</result>
+        </action>
+        <action name="ActiveAction" class="trangbtt.actions.ActiveAction">
+            <result name="error">error.jsp</result>
+            <result name="success">signIn.jsp</result>
+        </action>
+        <action name="ListCarAction" class="trangbtt.actions.ListCarAction">
+            <result name="error">error.jsp</result>
+            <result name="success">car.jsp</result>
+        </action>
+        <action name="SearchByNameAction" class="trangbtt.actions.SearchByNameAction">
+            <result name="error">error.jsp</result>
+            <result name="success">car.jsp</result>
+        </action>
+        <action name="SearchByCategoryAction" class="trangbtt.actions.SearchByCategoryAction">
+            <result name="error">error.jsp</result>
+            <result name="success">car.jsp</result>
+        </action>
+        <action name="OrderAction" class="trangbtt.actions.OrderAction">
+            <result name="error">error.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">ListCarAction</param>
+            </result>
+        </action>
+        <action name="DeleteCartAction" class="trangbtt.actions.DeleteCartAction">
+            <result name="error">error.jsp</result>
+            <result name="success">cart.jsp</result>
+        </action>
+         <action name="UpdateCartAction" class="trangbtt.actions.UpdateCartAction">
+            <result name="error">error.jsp</result>
+            <result name="success">cart.jsp</result>
+        </action>
+        <action name="InsertCartAction" class="trangbtt.actions.InsertCartAction">
+            <result name="error">error.jsp</result>
+            <result name="success">cart.jsp</result>
+        </action>
+         <action name="InsertCodeAction" class="trangbtt.actions.InsertCodeAction">
+            <result name="error">error.jsp</result>
+            <result name="success">cart.jsp</result>
+        </action>
+         <action name="HistotyAction" class="trangbtt.actions.HistotyAction">
+            <result name="error">error.jsp</result>
+            <result name="success">history.jsp</result>
+        </action>
+         <action name="SearchByNameHistoryAction" class="trangbtt.actions.SearchByNameHistoryAction">
+            <result name="error">error.jsp</result>
+            <result name="success">history.jsp</result>
+        </action>
+         <action name="SearchByDateHistoryAction" class="trangbtt.actions.SearchByDateHistoryAction">
+            <result name="error">error.jsp</result>
+            <result name="success">history.jsp</result>
+        </action>
+        <action name="DeleteHistoryAction" class="trangbtt.actions.DeleteHistoryAction">
+            <result name="error">error.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">HistotyAction</param>
+                <param name="user">${user}</param>
+            </result>
+        </action>
+        <action name="DetailHistoryAction" class="trangbtt.actions.DetailHistoryAction">
+            <result name="error">error.jsp</result>
+            <result name="success">history.jsp</result>
+        </action>
+        <action name="FeedbackAction" class="trangbtt.actions.FeedbackAction">
+            <result name="error">error.jsp</result>
+            <result name="success" type="redirectAction">
+                <param name="actionName">DetailHistoryAction</param>
+                <param name="user">${user}</param>
+                <param name="id">${id}</param>
+            </result>
+        </action>
+    </package>
+</struts>
