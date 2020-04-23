@@ -1,0 +1,206 @@
+body {
+    margin: 0px;
+}
+
+nav {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+#nav-1 {
+    background-color: whitesmoke;
+}
+
+.link-1 {
+    transition: 0.4s;
+    color: black;
+    font-size: 20px;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.link-1:hover {
+    text-decoration: none;
+    background-color: rgb(192, 189, 189);
+    color: red;
+    padding: 20px 10px;
+}
+
+#wel {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgb(24, 141, 75);
+    text-shadow: 1px 1px black;
+}
+
+.accorditionLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-right: 1px solid red;
+}
+
+.accorditionLink a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px 10px;
+}
+
+.accorditionLink a:hover {
+    background-color: red;
+    color: white;
+}
+
+#end {
+    display: flex;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    padding: 30px 0px 0px 20px;
+    height: 100%;
+    background-color: darkcyan;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#myBtn {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: -60px;
+    right: 20px;
+    z-index: 69;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 1px solid red;
+    background-color: wheat;
+    outline: none;
+    color: red;
+    border-radius: 50%;
+}
+
+@keyframes fadeUp {
+    from {
+        bottom: -60px;
+    }
+    to {
+        bottom: 20px;
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        bottom: 20px;
+    }
+    to {
+        bottom: -60px;
+    }
+}
+
+#myBtn:hover {
+    background-color: brown;
+    color: white;
+}
+
+#center {
+    text-align: center;
+}
+
+.contentLogin {
+    position: relative;
+    margin: 150px auto 0;
+    overflow: hidden;
+    width: 700px;
+    height: 500px;
+    background-color: white;
+    color: black;
+    border-color: Tomato;
+    display: flex;
+}
+
+.half {
+    width: 50%;
+    height: 100%;
+    padding: 65px 50px 0px 50px;
+}
+
+.half div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameH2 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 7px;
+}
+
+.nameH4 {
+    border-bottom: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.nameH4:hover {
+    border-bottom: 1px solid red;
+}
+
+.inputText {
+    font-size: 14px;
+    display: block;
+    width: 92%;
+    height: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 16px 13px;
+    border: 1px solid lightgray;
+}
+
+.submit {
+    font-size: 12p;
+    line-height: 42px;
+    display: block;
+    width: 48%;
+    height: 40px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #263238;
+    border: 1px solid lightgreen;
+    background: transparent;
+    text-align: center;
+    margin-top: 10px;
+    transition: 4ms;
+}
+
+.submit:hover {
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    color: white;
+    animation: animate 4s linear infinite;
+}
+
+img {
+    width: 250px;
+    height: 498px;
+    margin-top: 1px;
+}
